@@ -1,0 +1,18 @@
+
+
+.about p{
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 20px;
+    padding: 20px;
+}
+.about h2{
+    color:indigo;
+    text-align: left;
+}
+.about{
+     align-items: center;
+     margin: 70px;
+     padding: 20px;
+     border: 1px solid black;
+}

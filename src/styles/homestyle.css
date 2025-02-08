@@ -1,0 +1,84 @@
+/* homestyle.css */
+.home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgb(243, 231, 254);
+    padding: 50px;
+    margin-top: 20px;
+    width: 90%;
+    margin-left:2%;
+    border: 1px solid indigo;
+    box-shadow: 0 2px 10px indigo;
+}
+.home-tags{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: indigo;
+    text-align: center;
+    animation: textSlideDown 1s ease-out;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-right: 50px;
+}
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 0.5;
+      transform: translateX(0%);
+    }
+  }
+.cta-banner{
+    background:linear-gradient(to right,rgb(133, 51, 192),indigo,rgb(133, 51, 188));
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    animation: slideIn 1s ease-out;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    margin-top: 30px;
+}
+.cta-banner .cta-btn{
+    background-color: white;
+    color: indigo;
+    width: 20%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: none;
+}
+    
+@keyframes textSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popular-courses{
+    text-align: center;
+    margin: 40px 0;
+    color: white;
+}
+.popular-list{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.popular-card{
+    background:linear-gradient(to right,indigo,rgb(131, 4, 221));
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    width: 200px;
+    text-align: center;
+}

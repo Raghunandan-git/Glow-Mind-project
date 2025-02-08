@@ -1,0 +1,104 @@
+/* loginstyle.css */
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px;
+}
+.container{
+    background-color:rgb(243, 231, 254);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 75%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgb(162, 92, 227);
+}
+.icon img{
+    border-radius: 100px;
+    margin-bottom: -20px;
+    background-color:indigo;
+    padding: 2px;
+}
+h2{
+    margin-bottom: 20px;
+}
+.input-group{
+    margin-bottom: 20px;
+    text-align: left;
+}
+.input-group label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.input-group input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid indigo;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.input-group textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid indigo;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.input-group input:focus{
+    border: 2px solid indigo;
+    outline: none;
+}
+.input-group textarea:focus{
+    border: 2px solid indigo;
+    outline: none;
+}
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.options input{
+    margin-right: 10px;
+}
+button{
+    margin: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: indigo;
+    color: whitesmoke;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(71, 5, 119);
+    box-shadow: 0 5px 15px  rgb(111, 20, 186);
+    letter-spacing: 0.2px;
+}
+.links a{
+   color:indigo;
+   text-decoration: none;
+   margin: 0 5px;
+}
+.links a:hover{
+    text-decoration: underline;
+}
+.role-group div{
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+}
+.role-group label{
+    margin-left: 5px;
+}
+.role-group{
+    display: flex;
+    gap: 20px;
+}
