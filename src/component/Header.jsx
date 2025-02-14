@@ -11,7 +11,7 @@ export default function Header() {
         <h1>Learn Now</h1>
         <div className="login-btn">
             <Link to='/login'>
-            <button>Login/signup</button>
+            <button>Login/Signup</button>
             </Link>
         </div>
       </div>

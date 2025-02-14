@@ -30,6 +30,7 @@ import IntroductionToJava from '../CourseMaterials/JavaContents/IntroductionToJa
 import IntroductionToReact from '../CourseMaterials/ReactContents/IntroductionToReact';
 import AboutUs from '../pages/AboutUs';
 import ContactUs from '../pages/ContactUs';
+import Profile from '../pages/Profile';
 
 export default function Nav() {
   return (
@@ -54,19 +55,20 @@ export default function Nav() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/courses' element={<Courses/>} />
         <Route path='/about' element={<AboutUs/>} />
+        <Route path='/profile' element={<Profile/>} />
         <Route path='/contactUs' element={<ContactUs/>} />
-        <Route path='/cssintro' element={<CssIntro/>} />
-        <Route path='/htmlintro' element={<HtmlIntro/>} />
-        <Route path='/cppintro'  element={<CppIntro/>} />
-        <Route path='/javaintro' element={<JavaIntro/>} />
-        <Route path='/jsintro' element={<JsIntro/>} />
-        <Route path='/reactintro' element={<ReactIntro/>} />
-        <Route path='/introduction-to-html' element={<InttoductionToHTML/>} />
-        <Route path='/Introduction-to-Css' element={<IntroductionToCss/>} />
-        <Route path='/Introduction-to-Js' element={<IntroductionToJs/>} />
-        <Route path='/Introduction-to-C++' element={<IntroductionToCpp/>}  />
-        <Route path='/Introduction-yo-Java' element={<IntroductionToJava/>}  />
-        <Route path='/Introduction-to-react' element={<IntroductionToReact/>} />
+        <Route path='/courses/cssintro' element={<CssIntro/>} />
+        <Route path='/courses/htmlintro' element={<HtmlIntro/>} />
+        <Route path='/courses/cppintro'  element={<CppIntro/>} />
+        <Route path='/courses/javaintro' element={<JavaIntro/>} />
+        <Route path='/courses/jsintro' element={<JsIntro/>} />
+        <Route path='/courses/reactintro' element={<ReactIntro/>} />
+        <Route path='/courses/html/introduction-to-html' element={<InttoductionToHTML/>} />
+        <Route path='/courses/css/Introduction-to-Css' element={<IntroductionToCss/>} />
+        <Route path='/courses/js/Introduction-to-Js' element={<IntroductionToJs/>} />
+        <Route path='/courses/c++/Introduction-to-C++' element={<IntroductionToCpp/>}  />
+        <Route path='/courses/java/Introduction-yo-Java' element={<IntroductionToJava/>}  />
+        <Route path='/courses/react-basics/Introduction-to-react' element={<IntroductionToReact/>} />
       </Routes>
     </>
   );

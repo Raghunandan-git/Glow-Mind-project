@@ -5,21 +5,23 @@
     width: 200px;
     align-items: center;
     text-align: center;
-    max-height: 400px;
+    max-height: 415px;
     border-radius: 20px;
     box-shadow: 0 2px 5px indigo;
     flex: 0 0 auto; 
 
 }
-
+.rating{
+    color: rgb(255, 196, 0);
+}
 .card img{
     border-radius: 20px;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid rgb(52, 10, 92);
     transition: transform 0.3s ease,box-shadow 0.105s ease 0.105s;;
 }
 .card:hover img{
     transform: scale(1.02);
-    box-shadow: 0px 2px 5px 1px rgb(90, 89, 90);
+    box-shadow: 0px 2px 5px 1px rgba(59, 3, 96,0.7);
 }
 .card button{
     width: 60%;
