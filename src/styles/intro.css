@@ -1,6 +1,6 @@
 /* intro.css */
 .intro{
-    background-color: rgb(234, 216, 247);
+    background:linear-gradient(to right,rgb(255, 255, 255),rgb(227, 201, 244));
     display: flex;
     justify-content: space-around;
     padding: 50px;
@@ -16,6 +16,12 @@
     border-radius: 20px;
     height: 40%;
     width: 50%;
+    border: 2px solid indigo;
+    transition: transform 0.3s ease-in-out,box-shadow 0.25s ease-in-out ;
+}
+.intro img:hover{
+    transform: scale(1.005);
+    box-shadow: 1px 1px 20px rgba(63, 16, 97, 0.9);
 }
 .intro hr{
     color:indigo;
@@ -54,7 +60,10 @@
 .module li:hover{
     cursor: pointer;
 }
-
+.content{
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
 .content li{
     list-style-type: circle;
     list-style-position: inside;
@@ -84,4 +93,9 @@
 }
 .features li::marker{
     color: indigo;
+}
+.arrow-icon{
+    position: relative;
+    top: 3px;
+    right: 2px;
 }

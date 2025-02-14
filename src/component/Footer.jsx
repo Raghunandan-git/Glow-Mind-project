@@ -21,6 +21,7 @@ export default function Footer() {
                     <li>Terms and Condition</li>
                 </ul>
             </div>
+            
             <div className='footer-section-middle'>
                 <div className="icon">
                     <img src={logo} alt="logo" width={50} height={50}/>
@@ -33,10 +34,10 @@ export default function Footer() {
             <div className="footer-section">
                 <h4>Follow us on</h4>
                 <ul className='social-links'>
-                    <li> <FaInstagram color='indigo'/> Instagram</li>
-                    <li> <FaYoutube color='indigo' /> Youtube</li>
-                    <li> <FaLinkedin color='indigo' /> LinkedIn</li>
-                    <li> <FaFacebook color='indigo' /> facebook</li>
+                    <li> <FaInstagram className='icon' color='indigo'/> Instagram</li>
+                    <li> <FaYoutube color='indigo' className='icon' /> Youtube</li>
+                    <li> <FaLinkedin color='indigo' className='icon' /> LinkedIn</li>
+                    <li> <FaFacebook color='indigo' className='icon'/> facebook</li>
 
                 </ul>
             </div>

@@ -1,6 +1,8 @@
 //Html.jsx
 import React from 'react'
 import '../styles/card.css'
+import { FaStar } from 'react-icons/fa'
+
 import { Link } from 'react-router-dom'
 export default function Html() {
   return (
@@ -10,9 +12,9 @@ export default function Html() {
      <img src="https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg" alt="html" height={150} width={200}/>
      <h3>HTML:Beginner to advanced</h3>
      <p>Learn and practice HTML,from beginner level to avanced</p> 
-    <Link to={'/htmlintro'} >
-    <button>Enroll now</button>
-    </Link>
+     <p>4.6<FaStar className='rating'/> Ratings</p>
+     
+    <Link to='/courses/htmlintro' ><button>Enroll now</button></Link>
       </div>
     </>
   )

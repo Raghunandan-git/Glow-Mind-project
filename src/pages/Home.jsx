@@ -15,7 +15,7 @@ export default function Home() {
         <div className="home-tags">
             <h1>Welcome to Learn Now</h1>
             <h2>Empovering Education for everyone,everywhere</h2>
-            <h4>Login to Learn now portal</h4>
+            <h4>Login to Learn Now portal</h4>
         </div>
         <div className='btns'>
            <Link to='/login'> <button>Login</button> </Link>

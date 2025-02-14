@@ -1,40 +1,36 @@
-/* //navstyle.css */
+/* ///navstyle.css */
 .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
     list-style: none;
     padding: 5px 20px 5px 20px;
-    /* color: antiquewhite; */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background:linear-gradient(to right,indigo,rgb(133, 51, 192));
-    
-  }
-  .navbar-search{
-    position: relative;
-  }
-  .search-icon{
-    position: absolute;
-    left: 10px;
-    top: 7px;
-    color: indigo;
-  }
-
+    background: linear-gradient(to right, indigo, rgb(133, 51, 192));
+}
 .navbar-links ul{
     list-style-type: none;
     display: flex;
     gap: 20px;
 }
 .navbar-links ul li{
-    color: antiquewhite;
+    padding: 5px 15px;
+}
+.nav-link{
+    color: rgb(255, 255, 255);
+    font-size: 14px;
     text-decoration: none;
-    padding: 5px;
 }
 .navbar-links ul li:hover{
     background-color: rgb(254, 253, 254);
-    padding: 5px;
-    border-radius: 4px;
-    color: white;
+    border-radius: 10px;
+
+}
+.navbar-links ul li:hover .nav-link{
+    color: indigo;
+}
+.navbar-search{
+    position: relative;
 }
 
 .navbar-search input{
@@ -43,28 +39,59 @@
     border-radius: 10px;
     border: 2px solid black;
     width: 200%;
-    font-size: 14px;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.icon{
+    position: relative;
+    top: 1.5px;
+} 
+.search-icon{
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    color: indigo;
 }
 .navbar-search input:focus{
     outline: none;
 }
-
+.nav-profile ul{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 .nav-profile ul li{
-    padding: 5px;
-    color: aliceblue;
+    padding: 5px 15px;
     list-style-type: none;
+    cursor: pointer;
 }
 .nav-profile ul li:hover{
     background-color: rgb(255, 255, 255);
-    padding: 5px;
-    border-radius: 4px;
+    border-radius: 10px;
 }
-.nav-link{
-    color:rgb(255, 255, 255);
-    font-size: 14px;
+.nav-profile ul li:hover .nav-link{
+    color: indigo;
+}
+.profile{
+    background-color: rgb(227, 198, 248);
+    padding: 2px;
+    border-radius: 50px;
+    color: indigo;
+    border: 1.5px solid indigo;
+}
+.dropdown-menu{
+    position:absolute;
+    right: 0px;
+    top:165px;
+    width: 180px;
+    height: 150px;
+    background-color:rgb(176, 98, 235);  
+    border-radius: 10px;
+    color: white;
+}
+
+.dropdown-li{
+    color: rgb(0, 0, 0);
     text-decoration: none;
-}
-.nav-link:hover{
-    color:indigo;
-    font-size: 14px;
+
 }

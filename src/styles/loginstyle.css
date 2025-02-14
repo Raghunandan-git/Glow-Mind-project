@@ -70,16 +70,18 @@ button{
     margin: 20px;
     padding: 10px 20px;
     border: none;
-    background-color: indigo;
+    background:linear-gradient(to right,indigo,rgb(119, 9, 198));
     color: whitesmoke;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 100%;
     font-size: 16px;
     cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:large;
 }
 button:hover{
-    background-color: rgb(71, 5, 119);
-    box-shadow: 0 5px 15px  rgb(111, 20, 186);
+    background:linear-gradient(to right,rgb(52, 1, 89),rgb(95, 8, 157));
+    box-shadow: 5px 5px 10px 2px rgba(131, 15, 226, 0.6);
     letter-spacing: 0.2px;
 }
 .links a{
@@ -102,3 +104,4 @@ button:hover{
     display: flex;
     gap: 20px;
 }
+

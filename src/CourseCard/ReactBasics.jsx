@@ -1,17 +1,19 @@
 //React.jsx
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FaStar } from 'react-icons/fa'
 
 export default function ReactBasics() {
   return (
     <>
     <div className="card">
 
-<img src="https://media.licdn.com/dms/image/D4D12AQHSqD6l1fdonQ/article-cover_image-shrink_720_1280/0/1715857869245?e=2147483647&v=beta&t=6PjhaN7nmzi4C1c3JqXKLjlxUe50VDBj2pHRqyCftV0" alt="react" height={150} width={200}/>
-<h3>React basics</h3>
+<img src="https://imic.edu.vn/Contents/images/news/khoa-hoc-phat-trien-web-react-js-10-loi-the-hang-dau-cua-viec-su-dung-react-js-hoc-tai-imic.png" alt="react" height={150} width={200}/>
+<h3>React basics for Web-Beginner</h3>
 <p>Learn the fundamentals of React, including components, props, and state.</p> 
+<p>4.4<FaStar className='rating'/> Ratings</p>
 
-<Link to='/reactintro' >
+<Link to='/courses/reactintro' >
 <button>Enroll now</button>
 </Link>
 
