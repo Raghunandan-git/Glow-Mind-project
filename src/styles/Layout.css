@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+  }
+  
+  .content-area {
+    margin-left: 250px;
+    padding: 20px;
+    flex-grow: 1;
+  }
+  

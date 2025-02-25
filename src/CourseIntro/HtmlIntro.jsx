@@ -8,7 +8,7 @@ import {  FaAngleDown, FaAngleUp, FaStar } from 'react-icons/fa'
 
 export default function HtmlIntro() {
   const [expandedModule, setExpandedModule] = useState(null);
-  const contentRefs = useRef({}); // Store references for each module content
+  const contentRefs = useRef({}); 
 
   const toggleModule = (moduleId) => {
     setExpandedModule(expandedModule === moduleId ? null : moduleId);
@@ -18,22 +18,46 @@ export default function HtmlIntro() {
     {
       id: 'm1',
       title: 'Introduction to HTML',
-      content: ['Introduction to HTML', 'HTML Editors', 'Basic Structure of HTML'],
+      content:[
+        {name:"Introduction to HTML",path:'/courses/html/m1/introduction-to-html'},
+        {name:"HTML Editors",path:'/courses/html/m1/HTML-editors'},
+        {name:"Basic Structure of HTML",path:'/courses/html/m1/Basic-Structure-of-HTML'},
+        {name:"Assignment 1",path:'/Courses/htm/m1/quiz1'}
+      ]
+      
     },
     {
       id: 'm2',
       title: 'HTML Tags',
-      content: ['HTML elements', 'HTML Attributes', 'Document Structure Tags', 'Text Formatting tags', 'Lists', 'Tables'],
+      content:[
+        {name:"HTML elements",path:'/Courses/html/m2/HTML-Elements'},
+        {name:"HTML Attributes",path:'/Courses/html/m2/HTML-Attributes'},
+        {name:"Document Structure Tags",path:'/Courses/html/m2/Document-Structure-Tags'},
+        {name:"Text Formatting tags",path:'/Courses/html/m2/Text-Formatting-Tags'},
+        {name:"Lists",path:'/Courses/html/m2/List'},
+        {name:"Tables",path:'/Courses/html/m2/Tables'},
+        {name:"Assignment 2",path:'/Courses/html/m2/quiz2'},
+
+      ]
     },
     {
       id: 'm3',
       title: 'More HTML Tags',
-      content: ['Links and Media', 'HTML Forms', 'Semantic Tags'],
+      content:[
+        {name:"Links and Media",path:'/Courses/html/m3/Links-and-Media'},
+        {name:"HTML Forms",path:'/Courses/html/m3/HTML-Forms'},
+        {name:"Semantic tags",path:'/Courses/html/m3/Semantic-Tags'},
+        {name:"Assignment 3",path:'/Courses/html/m3/quiz3'},
+      ]
     },
     {
       id: 'm4',
       title: 'Understanding Styling and DOM',
-      content: ['Moving towards Styling', 'Understanding DOM'],
+      content:[
+        {name:"Container Elements",path:'/Courses/html/m4/Moving-towards-Styling'},
+        {name:"Understanding DOM",path:'/Courses/html/m4/Understanding-DOM'},
+        {name:"Assignment 4",path:'/Courses/html/m4/quiz4'}
+      ]
     },
   ];
 
@@ -51,7 +75,7 @@ export default function HtmlIntro() {
           <h3>4 Modules</h3>
           <h3>4.6<FaStar className='rating'/> Ratings</h3>
           
-          <Link to='/courses/html/introduction-to-html'>
+          <Link to='/html-contents'>
             <button>Go To Course</button>
           </Link>
         </div>
@@ -66,16 +90,18 @@ export default function HtmlIntro() {
               {expandedModule === module.id ? <FaAngleUp className="arrow-icon" /> : <FaAngleDown className="arrow-icon" />}
                  {module.title}
               </li>
-              <div
-                ref={(el) => (contentRefs.current[module.id] = el)}
-                className="content"
+              <div ref={(el) => (contentRefs.current[module.id] = el)} className="content"
                 style={{
                   maxHeight: expandedModule === module.id ? `${contentRefs.current[module.id]?.scrollHeight}px` : '0px',
                 }}
               >
                 <ul>
                   {module.content.map((item, index) => (
-                    <li key={index}>{item}</li>
+                      <Link to={item.path} className='contname'>
+                    <li key={index}>
+                      {item.name}
+                    </li>
+                      </Link>
                   ))}
                 </ul>
               </div>

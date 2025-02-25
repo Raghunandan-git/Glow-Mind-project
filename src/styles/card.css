@@ -2,14 +2,14 @@
     padding: 20px;
     margin: 10px;
     background-color:lavender;
-    width: 200px;
+    width: 18%;
     align-items: center;
     text-align: center;
     max-height: 415px;
     border-radius: 20px;
     box-shadow: 0 2px 5px indigo;
     flex: 0 0 auto; 
-
+   transition: transform 0.2s ease;
 }
 .rating{
     color: rgb(255, 196, 0);
@@ -18,6 +18,9 @@
     border-radius: 20px;
     border: 2px solid rgb(52, 10, 92);
     transition: transform 0.3s ease,box-shadow 0.105s ease 0.105s;;
+}
+.card:hover{
+    transform: scale(1.05);
 }
 .card:hover img{
     transform: scale(1.02);
