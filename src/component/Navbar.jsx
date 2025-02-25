@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/navstyle.css";
-import { FaHome, FaSearch, FaUser, FaBook, FaBell, FaAngleDown } from "react-icons/fa";
+import { FaHome, FaSearch, FaUser, FaBook, FaBell, FaAngleDown, FaPen, } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,13 +39,16 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/feedback" className="nav-link">Feedback</Link>
+            <Link to="/assignments" className="nav-link">
+            <FaPen className="icon" />
+            Assignments
+            </Link>
           </li>
         </ul>
       </div>
 
       <div className="navbar-search">
-        <FaSearch className="search-icon" size={20} />
+        <FaSearch className="search-icon" size={15} />
         <input type="text" id="search" name="search" placeholder="Search" />
       </div>
 
@@ -55,11 +58,12 @@ export default function Navbar() {
             <FaBell size={20} className="icon" color="orange" />
           </li>
           <li>
-            <FaAngleDown color="indigo" />
+            <FaAngleDown color="black" />
             <FaUser size={20} className="profile" onClick={toggleDropdown} />
             {isOpen && (
               <div className="dropdown-menu">
                 <li><Link to="/profile" className="dropdown-li">My Profile</Link></li>
+                <li><Link to="/student" className="dropdown-li">Dashboard</Link></li>
                 <li><Link to="/settings" className="dropdown-li">Settings</Link></li>
                 <li><Link to="/courses" className="dropdown-li">My Courses</Link></li>
                 <li><Link to="/Settings" className="dropdown-li">Settings</Link></li>

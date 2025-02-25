@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaStar } from 'react-icons/fa'
 
-export default function Java() {
+export default function Java({buttontext}) {
   return (
     <>
        <div className="card">
@@ -14,7 +14,7 @@ export default function Java() {
 <p>4.0<FaStar className='rating'/> Ratings</p>
 
 <Link to='/courses/javaintro'>
-<button>Enroll now</button>
+<button>{buttontext}</button>
 </Link>
 
 </div>

@@ -1,7 +1,7 @@
 //Home.jsx
 import React from 'react'
 import '../styles/homestyle.css'
-import logo from '../ln logo.jpg'
+import logo from '../Glow mind logo.png';
 import { Link } from 'react-router-dom'
 import Footer from '../component/Footer'
 
@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <>
      <div className="home-container">
-        <div className="icon">
-                  <img src={logo} alt="logo" width={90} height={90}/>
+        <div className="logoimg">
+                  <img src={logo} alt="logo" width={150} height={150}/>
                 </div>
         <div className="home-tags">
-            <h1>Welcome to Learn Now</h1>
+            <h1>Welcome to Glow Mind</h1>
             <h2>Empovering Education for everyone,everywhere</h2>
-            <h4>Login to Learn Now portal</h4>
+            <h4>Login to Glow Mind portal</h4>
         </div>
         <div className='btns'>
            <Link to='/login'> <button>Login</button> </Link>
@@ -45,7 +45,7 @@ export default function Home() {
         <br />
         <hr width='90%' color='black'  />
       <div className="cta-banner">
-    <h2>🎓 Elevate Your Skills with Learn Now!</h2>
+    <h2>🎓 Elevate Your Skills with Glow Mind!</h2>
     <p>Join thousands of learners and start mastering new skills today.</p>
     <Link to="/courses"><button className="cta-btn">Join Now</button></Link>
 </div>

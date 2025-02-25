@@ -3,7 +3,7 @@ import React from 'react'
 import { FaStar } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
-export default function Cpplus() {
+export default function Cpplus({buttontext}) {
   return (
     <>
      <div className="card">
@@ -13,7 +13,7 @@ export default function Cpplus() {
 <p>Understanding the core concepts in programming with c++</p> 
 <p>4.2<FaStar className='rating'/> Ratings</p>
 <Link to='/courses/cppintro' >
-<button>Enroll now</button>
+<button>{buttontext}</button>
 </Link>
 
 </div> 

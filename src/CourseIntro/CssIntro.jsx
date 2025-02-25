@@ -16,27 +16,52 @@ export default function CssIntro() {
     {
       id: 'm1',
       title: 'Introduction to CSS',
-      content: ['Introduction to CSS', 'Different ways of writing CSS', 'CSS Selectors', 'Styling text with CSS'],
+      // content: ['Introduction to CSS', 'Different ways of writing CSS', 'CSS Selectors', 'Styling text with CSS'],
+      content:[
+        {name:"Introduction to CSS",path:"/courses/css/m1/Introduction-to-Css"},
+        {name:"Different ways of writing CSS",path:"/courses/css/m1/different-ways-of-writing-css"},
+        {name:"CSS Selectors",path:"/courses/css/m1/Css-selectors"},
+        {name:"Styling text with CSS",path:"/courses/css/m1/Styling-text"},
+        {name:"Assignment 1",path:"/courses/css/m1/assigment1"},
+      ]
     },
     {
       id: 'm2',
       title: 'CSS Block Models, Links, Lists, and Background Images',
-      content: ['CSS Block Models', 'Styling Links and Lists', 'Styling Background'],
+      content:[
+        {name:"CSS Block Models",path:'/courses/css/m2/CSS-Block-Models'},
+        {name:"Styling Lists and Links",path:'/courses/css/m2/Styling-lists-links'},
+        {name:"Styling Background",path:'/courses/css/m2/Styling-Background'},
+        {name:"Assignment 2",path:'/courses/css/m2/assigment2'},
+      ]
     },
     {
       id: 'm3',
       title: 'CSS Display Properties',
-      content: ['Display, Position Property', 'Understanding Float, Clear, and Overview in CSS'],
+      content:[
+        {name:"Display, Position Property",path:'/courses/css/m3/Display,Position-Property'},
+        {name:"Understanding Float, Clear, and Overview in CSS",path:'/courses/css/m3/Float-clear-overview'},
+        {name:"Assignment 3",path:'/courses/css/m3/assigment3'},
+      ]
     },
     {
       id: 'm4',
       title: 'FlexBox and Grid',
-      content: ['Introduction to FlexBox', 'More About Flex', 'Introduction to Grid', 'More About Grid'],
+      content:[
+        {name:"Introduction to FlexBox",path:'/courses/css/m4/Introduction-to-flexbox'},
+        {name:"Introduction to Grid",path:'/courses/css/m4/Introduction-to-Grid'},
+        {name:"Assignment 4",path:'/courses/css/m4/assigment4'},
+      ]
     },
     {
       id: 'm5',
       title: 'CSS Animations',
-      content: ['Introduction to Animations', 'Shorthand Property'],
+      // content: ['Introduction to Animations', 'Shorthand Property'],
+      content:[
+        {name:"Introduction to Animation",path:'/courses/css/m5/Introduction-to-animation'},
+        {name:"Shorthand Property",path:'/courses/css/m5/shorthand'},
+        {name:"Assignment 5",path:'/courses/css/m5/assigment5'},
+      ]
     },
   ];
 
@@ -78,8 +103,12 @@ export default function CssIntro() {
               >
                 <ul>
                   {module.content.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
+                        <Link to={item.path} className='contname'>
+                      <li key={index}>
+                          {item.name}
+                      </li>
+                        </Link>
+                   ))}
                 </ul>
               </div>
             </div>

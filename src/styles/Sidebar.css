@@ -1,0 +1,109 @@
+body.no-scroll{
+  overflow: hidden;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    margin-top:11%;
+    margin-left: 10px;
+    left: -400px;
+    width: 250px;
+    height: 70%;
+    background: linear-gradient(to right,white,rgb(240, 218, 255));
+    transition: left 0.3s ease-in-out;
+    padding: 20px;
+    z-index: 1000;
+    border: 1px solid indigo;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px 20px rgba(167, 44, 255, 0.29);
+    overflow-y: auto;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar-list{
+    list-style-type: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .module-title{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid indigo;
+    border-radius: 20px;
+    font-weight: bold;
+
+  }
+  .sidebar-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #ddd;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+  .content {
+    /* max-height: 0; */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+  .content li{
+    list-style-type: circle;
+    list-style-position: inside;
+    font-size:16px;
+    font-weight: lighter;
+    border-top: 1px solid rgb(177, 84, 244);
+    margin: 5px;
+    padding: 7px;
+    
+}
+.content li:hover{
+    background:linear-gradient(to right,rgb(250, 244, 255),rgb(217, 166, 247));
+}
+.contname{
+    color: black;
+    text-decoration: none;
+    font-size: large;
+}
+  
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .overlay.active {
+    pointer-events: all;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    z-index: 999;
+}
+  
+  #toggle-button {
+    display: flex;
+    max-width: 50px;
+    margin-left: 50px;
+    position:absolute;
+    align-items: center;
+    background:linear-gradient(to right,white,rgb(227, 194, 250));
+    border: 1px solid indigo;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(128, 0, 255, 0.633);
+  }
+  
+  

@@ -1,8 +1,9 @@
 //Login.jsx
 import React, { useState } from 'react'
 import '../styles/loginstyle.css'
-import logo from '../ln logo.jpg';
+import logo from '../Glow mind logo.png';
 import { Link, useNavigate } from 'react-router-dom';
+import { FaAsterisk } from 'react-icons/fa';
 export default function Login() {
   const [role,SetRole]=useState('')
   const navigate=useNavigate();
@@ -23,21 +24,21 @@ export default function Login() {
     <>
      <div className='box'>
       <div className="container">
-        <div className="icon">
-          <img src={logo} alt="logo" width={90} height={90}/>
+        <div className="logoimg">
+          <img src={logo} alt="logo" width={150} height={150}/>
         </div>
         <h2>Sign-in</h2>
           <form onSubmit={handleSubmit} >
           <div className="input-group">
-            <label htmlFor="email">Email Address *</label>
+            <label htmlFor="email">Email Address <FaAsterisk className='asterisk'/></label>
             <input type="email" id="email" placeholder="Email Address" />
           </div>
           <div className="input-group">
-            <label htmlFor="password">Password *</label>
+            <label htmlFor="password">Password <FaAsterisk className='asterisk'/></label>
             <input type="password" id="password" placeholder="Password" />
           </div>
           <div className="role-group">
-            <label >Role*</label>
+            <label >Role <FaAsterisk className='asterisk'/></label>
             <div>
             <input type="radio" id='student' name='role' value="student" onChange={(e)=>SetRole(e.target.value)} />
             <label htmlFor="student">Student</label>

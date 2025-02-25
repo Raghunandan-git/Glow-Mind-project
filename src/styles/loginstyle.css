@@ -9,19 +9,19 @@
 }
 .container{
     background-color:rgb(243, 231, 254);
-    padding: 40px;
+    padding: 50px;
     border-radius: 20px;
     text-align: center;
     width: 75%;
     max-width: 400px;
     box-shadow: 0 4px 6px rgb(162, 92, 227);
 }
-.icon img{
+.logoimg img{
     border-radius: 100px;
-    margin-bottom: -20px;
-    background-color:indigo;
+    border: 3px solid rgb(255, 183, 1);
     padding: 2px;
 }
+
 h2{
     margin-bottom: 20px;
 }
@@ -35,7 +35,7 @@ h2{
     font-size: 14px;
 }
 .input-group input{
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid indigo;
     border-radius: 5px;
@@ -81,7 +81,7 @@ button{
 }
 button:hover{
     background:linear-gradient(to right,rgb(52, 1, 89),rgb(95, 8, 157));
-    box-shadow: 5px 5px 10px 2px rgba(131, 15, 226, 0.6);
+    box-shadow: 0px 0px 10px 5jpx rgb(194, 120, 255);
     letter-spacing: 0.2px;
 }
 .links a{
@@ -105,3 +105,8 @@ button:hover{
     gap: 20px;
 }
 
+.asterisk{
+    color: red;
+    font-size:7px;
+    margin-bottom: 4px;
+}

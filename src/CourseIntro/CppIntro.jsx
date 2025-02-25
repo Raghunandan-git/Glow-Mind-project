@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import '../styles/intro.css';
 import { Link } from 'react-router-dom';
-import {  FaAngleDown, FaAngleUp, FaStar } from 'react-icons/fa'
+import { FaAngleDown, FaAngleUp, FaStar } from 'react-icons/fa';
 
 export default function CppIntro() {
   const [expandedModule, setExpandedModule] = useState(null);
@@ -15,28 +15,58 @@ export default function CppIntro() {
     {
       id: 'm1',
       title: 'Introduction to C++',
-      content: ['Setting up IDE', 'Basic Code Structure', 'Input/Output in C++'],
+      content: [
+
+        { name: 'Introduction to C++', path: '/courses/c++/m1/Introduction-to-C++' },
+        { name: 'Setting up IDE', path: '/courses/c++/m1/setting-up-ide' },
+        { name: 'Basic Code Structure', path: '/courses/c++/m1/basic-code-structure' },
+        { name: 'Input/Output in C++', path: '/courses/c++/m1/input-output' }
+      ]
     },
     {
       id: 'm2',
       title: 'Programming Constructs of C++',
-      content: ['DataTypes in C++', 'Overflow and Underflow', 'TypeCasting and Type Conversion', 'Operators', 'Escape Sequences'],
+      content: [
+        { name: 'DataTypes in C++', path: '/courses/c++/m2/datatypes' },
+        { name: 'Overflow and Underflow', path: '/courses/c++/m2/overflow-underflow' },
+        { name: 'TypeCasting and Type Conversion', path: '/courses/c++/m2/typecasting' },
+        { name: 'Operators', path: '/courses/c++/m2/operators' },
+        { name: 'Escape Sequences', path: '/courses/c++/m2/escape-sequences' }
+      ]
     },
     {
       id: 'm3',
       title: 'Control Statements and Functions in C++',
-      content: ['Conditional Statements', 'Looping Statements', 'Jump Statements', 'Introduction to Functions in C++'],
+      content: [
+        { name: 'Conditional Statements', path: '/courses/c++/m3/conditional-statements' },
+        { name: 'Looping Statements', path: '/courses/c++/m3/looping-statements' },
+        { name: 'Jump Statements', path: '/courses/c++/m3/jump-statements' },
+        { name: 'Introduction to Functions in C++', path: '/courses/c++/m3/functions' }
+      ]
     },
     {
       id: 'm4',
       title: 'Arrays and Structures in C++',
-      content: ['Introduction to Arrays', 'Arrays and Loops', '2D Arrays', 'Structures in C++', 'All about Pointers'],
+      content: [
+        { name: 'Introduction to Arrays', path: '/courses/c++/m4/arrays' },
+        { name: 'Arrays and Loops', path: '/courses/c++/m4/arrays-loops' },
+        { name: 'Multidimentional Arrays', path: '/courses/c++/m4/2d-arrays' },
+        { name: 'Structures in C++', path: '/courses/c++/m4/structures' },
+        { name: 'All about Pointers', path: '/courses/c++/m4/pointers' }
+      ]
     },
     {
       id: 'm5',
       title: 'Class and STL in C++',
-      content: ['Class/Objects', 'Constructors', 'OOP Concepts', 'Vectors', 'Sets', 'Maps'],
-    },
+      content: [
+        { name: 'Class/Objects', path: '/courses/c++/m5/class-objects' },
+        { name: 'Constructors', path: '/courses/c++/m5/constructors' },
+        { name: 'OOP Concepts', path: '/courses/c++/m5/oop-concepts' },
+        { name: 'Vectors', path: '/courses/c++/m5/vectors' },
+        { name: 'Sets', path: '/courses/c++/m5/sets' },
+        { name: 'Maps', path: '/courses/c++/m5/maps' }
+      ]
+    }
   ];
 
   return (
@@ -53,7 +83,7 @@ export default function CppIntro() {
           <h3>5 Modules</h3>
           <h3>4.2<FaStar className='rating'/> Ratings</h3>
           
-          <Link to={'/courses/c++/Introduction-to-C++'}>
+          <Link to={'/sidebar'}>
             <button>Go To Course</button>
           </Link>
         </div>
@@ -66,7 +96,7 @@ export default function CppIntro() {
             <div className="module" key={module.id}>
               <li onClick={() => toggleModule(module.id)}>
               {expandedModule === module.id ? <FaAngleUp className="arrow-icon" /> : <FaAngleDown className="arrow-icon" />}
-              {  module.title}
+              {module.title}
               </li>
               <div
                 ref={(el) => (contentRefs.current[module.id] = el)}
@@ -77,7 +107,9 @@ export default function CppIntro() {
               >
                 <ul>
                   {module.content.map((item, index) => (
-                    <li key={index}>{item}</li>
+                    <Link to={item.path} className='contname' key={index}>
+                      <li>{item.name}</li>
+                    </Link>
                   ))}
                 </ul>
               </div>

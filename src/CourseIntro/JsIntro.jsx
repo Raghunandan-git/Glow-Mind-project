@@ -16,27 +16,53 @@ export default function JsIntro() {
     {
       id: 'm1',
       title: 'Introduction and Installing JavaScript',
-      content: ['Introduction to JS', 'Running JavaScript Locally'],
+      content:[
+        {name:"Introduction to JS",path:'/courses/js/m1/Introduction-to-Js'},
+        {name:"Running-Javascript-Locally",path:'/courses/js/m1/Runnning-Js'}
+      ]
     },
     {
       id: 'm2',
       title: 'Programming Constructs in JS',
-      content: ['Syntax, Variables and DataTypes', 'Operators', 'Input/Output in JS', 'Mastering Conditional Statement', 'Mastering Switch Statement', 'Mastering Loops', 'Mastering Functions'],
+      content:[
+        {name:"Syntax, Variables and DataTypes",path:'/courses/js/m2/Syntax-variables-datatypes'},
+        {name:"Operators",path:'/courses/js/m2/Operators'},
+        {name:"Input/Output in JS",path:'/courses/js/m2/Input-Output-in-JS'},
+        {name:"Mastering Conditional Statement",path:'/courses/js/m2/Mastering-Conditional-Statement'},
+        {name:"Mastering Switch Statement",path:'/courses/js/m2/Mastering-Switch-Statement'},
+        {name:"Mastering Loops",path:'/courses/js/m2/Mastering-Loops'},
+        {name:"Mastering Functions",path:'/courses/js/m2/Mastering-Functions'}
+      ]
     },
     {
       id: 'm3',
       title: 'Scope and Arrow Functions',
-      content: ['Scopes in JavaScript', 'Mastering Arrow Functions'],
+      content:[
+        {name:"Scopes in JavaScript",path:'/courses/js/m3/Scopes-js'},
+        {name:"Mastering Arrow Functions",path:'/courses/js/m3/Mastering-arrow-Functions'},
+
+      ]
     },
     {
       id: 'm4',
       title: 'Objects and Arrays in JS',
-      content: ['Introduction to Objects', 'Object Methods', 'Introduction to Arrays', 'Methods of Arrays'],
+      content:[
+        {name:"Introduction to Objects",path:'/courses/js/m4/Introduction-to-objcts'},
+        {name:"Object Methodss",path:'/courses/js/m4/Object-methods'},
+        {name:"Introduction to Arrays",path:'/courses/js/m4/Introduction-to-arrays'},
+        {name:"Methods of Arrays",path:'/courses/js/m4/Array-methods'},
+
+      ]
     },
     {
       id: 'm5',
       title: 'JavaScript Methods',
-      content: ['String Methods', 'Number Methods', 'Understanding Errors in JavaScript'],
+      content:[
+        {name:"String Methods",path:'/courses/js/m4/String-methods'},
+        {name:"Number Methods",path:'/courses/js/m4/Number-methods'},
+        {name:"Understanding Errors in JavaScript",path:'/courses/js/m4/Error-in-js'},
+
+      ]
     },
   ];
 
@@ -78,7 +104,11 @@ export default function JsIntro() {
               >
                 <ul>
                   {module.content.map((item, index) => (
-                    <li key={index}>{item}</li>
+                      <Link to={item.path} className='contname'>
+                    <li key={index}>
+                      {item.name}
+                    </li>
+                      </Link>
                   ))}
                 </ul>
               </div>

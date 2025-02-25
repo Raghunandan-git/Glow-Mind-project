@@ -1,0 +1,21 @@
+.about-profile{
+    background-color: rgb(243, 226, 254);
+    padding: 50px;
+    margin: 20px;
+    border: 2px solid indigo;
+    border-radius: 20px;
+    
+}
+.profile-cont{
+    display: flex;
+    gap: 50px;
+}
+.about-profile img{
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    border: 2px solid indigo;
+}
+.profiles ul {
+     list-style-type: none;
+}

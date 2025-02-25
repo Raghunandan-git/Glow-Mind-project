@@ -1,0 +1,21 @@
+.container {
+    padding: 24px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  .section {
+    margin-top: 24px;
+  }
+  
