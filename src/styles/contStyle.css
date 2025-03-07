@@ -15,6 +15,10 @@
 .buttns{
     display: flex;
     margin: 20px 25%;
+    justify-content:center;
+}
+.buttns button{
+    width: 250px;
 }
 #heading{
     padding: 5px;

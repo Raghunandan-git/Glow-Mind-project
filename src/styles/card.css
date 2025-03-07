@@ -1,8 +1,8 @@
 .card{
     padding: 20px;
     margin: 10px;
-    background-color:lavender;
-    width: 18%;
+    background-color:rgb(255, 255, 255);
+    width: 290px;
     align-items: center;
     text-align: center;
     max-height: 415px;
@@ -20,7 +20,7 @@
     transition: transform 0.3s ease,box-shadow 0.105s ease 0.105s;;
 }
 .card:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 .card:hover img{
     transform: scale(1.02);

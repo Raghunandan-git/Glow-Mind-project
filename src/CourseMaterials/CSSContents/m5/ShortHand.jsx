@@ -1,5 +1,6 @@
 import React from 'react'
 import CssSidebar from '../CssSidebar'
+import { Link } from 'react-router-dom'
 
 export default function ShortHand() {
   return (
@@ -75,7 +76,7 @@ export default function ShortHand() {
       </div>
       <div className="buttns">
       <button>Mark As Compleated</button>
-      <button>Next</button>
+      <Link to={'/courses/css/m5/assigment5'}><button>Next</button></Link>
     </div>
     </>
   )

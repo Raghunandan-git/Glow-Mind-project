@@ -1,5 +1,6 @@
 import React from 'react'
 import HtmlSidebar from '../HtmlSidebar'
+import { Link } from 'react-router-dom'
 
 export default function UnderstandingDOM() {
   return (
@@ -32,7 +33,7 @@ export default function UnderstandingDOM() {
       </div>
       <div className="buttns">
       <button>Previous</button>
-      <button>Mark As Compleated</button>
+      <Link to={'/Courses/html/m4/quiz4'}><button>Mark As Compleated</button></Link>
     </div>
     </>
   )

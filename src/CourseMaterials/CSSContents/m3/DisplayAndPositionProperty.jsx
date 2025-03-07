@@ -1,5 +1,6 @@
 import React from 'react'
 import CssSidebar from '../CssSidebar'
+import { Link } from 'react-router-dom'
 
 export default function DisplayAndPositionProperty() {
   return (
@@ -267,7 +268,9 @@ In this article, we’ll break down the different types of positioning in CSS, h
 
       <div className="buttns">
       <button>Mark As Compleated</button>
+      <Link to={'/courses/css/m3/Float-clear-overview'}>
       <button>Next</button>
+      </Link>
     </div>
     </>
   )

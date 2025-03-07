@@ -70,7 +70,7 @@ button{
     margin: 20px;
     padding: 10px 20px;
     border: none;
-    background:linear-gradient(to right,indigo,rgb(119, 9, 198));
+    background:linear-gradient(to right,rgb(132, 18, 213),rgb(127, 1, 216));
     color: whitesmoke;
     border-radius: 10px;
     width: 100%;
@@ -80,8 +80,8 @@ button{
     font-size:large;
 }
 button:hover{
-    background:linear-gradient(to right,rgb(52, 1, 89),rgb(95, 8, 157));
-    box-shadow: 0px 0px 10px 5jpx rgb(194, 120, 255);
+    background:linear-gradient(to right,rgb(132, 18, 213),rgb(102, 0, 175));
+    box-shadow: 0px 0px 10px 0px rgba(140, 0, 255, 0.692);
     letter-spacing: 0.2px;
 }
 .links a{

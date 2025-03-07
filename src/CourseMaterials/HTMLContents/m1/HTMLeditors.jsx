@@ -2,6 +2,7 @@
 import React from 'react'
 import HtmlSidebar from '../HtmlSidebar'
 import '../../../styles/contStyle.css'
+import { Link } from 'react-router-dom'
 
 
 export default function HTMLeditors() {
@@ -65,8 +66,8 @@ export default function HTMLeditors() {
       <div className="buttns">
       
       <button>Mark As Compleated</button>
-      <button>Next</button>
-    </div>
+      <Link to={'/courses/html/m1/Basic-Structure-of-HTML'}><button>Next</button></Link>
+     </div>
     </>
   )
 }

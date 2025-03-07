@@ -1,5 +1,6 @@
 import React from 'react'
 import CssSidebar from '../CssSidebar'
+import { Link } from 'react-router-dom'
 
 export default function IntroductionToAnimation() {
   return (
@@ -137,7 +138,7 @@ alternate-reverse: Plays backward, then forward.</p>
 
       <div className="buttns">
       <button>Mark As Compleated</button>
-      <button>Next</button>
+      <Link to={'/courses/css/m5/shorthand'}><button>Next</button></Link>
     </div>
     </>
   )

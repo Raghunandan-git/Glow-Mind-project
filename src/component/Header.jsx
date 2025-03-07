@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <>
       <div className='header'>
-        <img src={logo} alt="logo" height={40} width={40}/>
+        <img src={logo} alt="logo" height={40} width={40} />
         <h1>Glow  Mind</h1>
         <div className="login-btn">
             <Link to='/login'>

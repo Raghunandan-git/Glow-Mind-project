@@ -32,21 +32,7 @@
     text-align: center;
     margin-top: 20px;
   }
-  
-  .submit-button {
-    background: #9900ff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .submit-button:hover {
-    background: #6b00b3;
-  }
-  
+    
   .result-modal {
     text-align: center;
     padding: 20px;
@@ -71,6 +57,7 @@
     padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
+    max-width: 50%;
   }
   
   .close-button:hover {

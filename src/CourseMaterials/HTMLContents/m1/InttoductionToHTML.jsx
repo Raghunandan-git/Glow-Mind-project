@@ -2,6 +2,7 @@
 import React from 'react'
 import '../../../styles/contStyle.css'
 import HtmlSidebar from '../HtmlSidebar'
+import { Link } from 'react-router-dom'
 export default function InttoductionToHTML() {
   return (
     <>
@@ -43,7 +44,7 @@ export default function InttoductionToHTML() {
     <div className="buttns">
       
       <button>Mark As Compleated</button>
-      <button>Next</button>
+      <Link to={'/courses/html/m1/HTML-editors'}><button>Next</button></Link>
     </div>
 
     

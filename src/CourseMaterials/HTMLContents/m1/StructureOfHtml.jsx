@@ -2,6 +2,7 @@
 import React from 'react'
 import HtmlSidebar from '../HtmlSidebar'
 import '../../../styles/contStyle.css'
+import { Link } from 'react-router-dom'
 
 
 export default function StructureOfHtml() {
@@ -56,7 +57,7 @@ export default function StructureOfHtml() {
       </div>
       <div className="buttns">
       <button>Mark As Compleated</button>
-      <button>Next</button>
+      <Link to={'/Courses/htm/m1/quiz1'}><button>Next</button></Link>
     </div>
       
     </>
