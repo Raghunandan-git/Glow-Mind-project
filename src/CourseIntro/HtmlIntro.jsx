@@ -75,7 +75,7 @@ export default function HtmlIntro() {
           <h3>4 Modules</h3>
           <h3>4.6<FaStar className='rating'/> Ratings</h3>
           
-          <Link to='/html-contents'>
+          <Link to='/courses/html/m1/introduction-to-html'>
             <button>Go To Course</button>
           </Link>
         </div>

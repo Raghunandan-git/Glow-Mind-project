@@ -137,6 +137,12 @@ import CssQuiz3 from '../CourseMaterials/CSSContents/m3/CssQuiz3';
 import CssQuiz4 from '../CourseMaterials/CSSContents/m4/CssQuiz4';
 import CssQuiz5 from '../CourseMaterials/CSSContents/m5/CssQuiz5';
 import Assignments from '../pages/Assignments';
+import PythonIntro from '../CourseIntro/PythonIntro';
+import MySQLIntro from '../CourseIntro/MySQLIntro';
+import BootstrapIntro from '../CourseIntro/BootstrapIntro';
+import MongoDBIntro from '../CourseIntro/MongodbIntro';
+import TailwindCSSIntro from '../CourseIntro/TailwindIntro';
+import NodeExpressIntro from '../CourseIntro/ExpressIntro';
 
 
 
@@ -163,6 +169,13 @@ export default function Nav() {
         <Route path='/courses/javaintro' element={<JavaIntro/>} />
         <Route path='/courses/jsintro' element={<JsIntro/>} />
         <Route path='/courses/reactintro' element={<ReactIntro/>} />
+        <Route path='/courses/pythonintro' element={<PythonIntro/>} />
+        <Route path='/courses/mysqlintro' element={<MySQLIntro/>} />
+        <Route path='/courses/bootstrapintro' element={<BootstrapIntro/>} />
+        <Route path='/courses/mongodbintro' element={<MongoDBIntro/>} />
+        <Route path='/courses/tailwindintro' element={<TailwindCSSIntro/>} />
+        <Route path='/courses/node-expressintro' element={<NodeExpressIntro/>} />
+
 
         <Route path='/courses/html/m1/introduction-to-html' element={<InttoductionToHTML/>} />
         <Route path='/courses/html/m1/HTML-editors' element={<HTMLeditors/>} />

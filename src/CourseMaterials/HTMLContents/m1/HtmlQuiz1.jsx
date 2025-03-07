@@ -83,7 +83,7 @@ export default function HtmlQuiz1() {
         </div>
       ))}
       <div className="submit-container">
-        <button className="submit-button" onClick={handleSubmit}>Submit</button>
+        <button  onClick={handleSubmit}>Submit</button>
       </div>
       {show && (
         <div className="result-modal" style={{ backgroundColor: score >= 75 ? "rgba(0, 255, 0, 0.5)" : "rgba(255, 0, 0, 0.41)" }}>

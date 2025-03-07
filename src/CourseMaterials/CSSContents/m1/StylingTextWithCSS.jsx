@@ -1,5 +1,6 @@
 import React from 'react'
 import CssSidebar from '../CssSidebar'
+import { Link } from 'react-router-dom'
 
 export default function StylingTextWithCSS() {
   return (
@@ -124,7 +125,7 @@ export default function StylingTextWithCSS() {
       </div>
       <div className="buttns">
       <button>Mark As Compleated</button>
-      <button>Next</button>
+      <Link to={"/courses/css/m1/assigment1"}><button>Next</button></Link>
     </div>
     </>
   )

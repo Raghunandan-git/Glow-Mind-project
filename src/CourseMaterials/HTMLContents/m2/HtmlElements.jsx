@@ -1,6 +1,7 @@
 //HtmlElements.jsx
 import React from 'react'
 import HtmlSidebar from '../HtmlSidebar'
+import { Link } from 'react-router-dom'
 
 export default function HtmlElements() {
   return (
@@ -42,7 +43,8 @@ export default function HtmlElements() {
       <div className="buttns">
       
       <button>Mark As Compleated</button>
-      <button>Next</button>
+      <Link to={'/Courses/html/m2/HTML-Attributes'}><button>Next</button></Link>
+
     </div>
     </>
   )

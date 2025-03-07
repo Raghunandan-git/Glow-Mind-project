@@ -10,6 +10,12 @@ import Java from '../CourseCard/Java'
 import ReactBasics from '../CourseCard/ReactBasics'
 import Footer from '../component/Footer'
 import { Link } from 'react-router-dom'
+import Python from '../CourseCard/Python'
+import MySQL from '../CourseCard/MySQL'
+import Bootstrap from '../CourseCard/Bootstrap'
+import MongoDB from '../CourseCard/Mongodb'
+import Tailwind from '../CourseCard/Tailwind'
+import Express from '../CourseCard/ExpressCard'
 export default function Courses() {
   return (
     <>
@@ -22,6 +28,13 @@ export default function Courses() {
       <Cpplus buttontext={"Enroll Now"}/>
       <Java buttontext={"Enroll Now"}/>
       <ReactBasics buttontext={"Enroll Now"}/>
+      <Python buttontext={"Enroll Now"}/>
+      <MySQL buttontext={"Enroll Now"}/>
+      <Bootstrap buttontext={"Enroll Now"}/>
+      <MongoDB buttontext={"Enroll Now"}/>
+      <Tailwind buttontext={"Enroll Now"}/>
+      <Express buttontext={"Enroll Now"}/>
+
     </div>
       <h1>Categories</h1>
     <div className="categories">

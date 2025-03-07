@@ -1,5 +1,6 @@
 import React from 'react'
 import CssSidebar from '../CssSidebar'
+import { Link } from 'react-router-dom'
 
 export default function StylingBackground() {
   return (
@@ -61,7 +62,7 @@ export default function StylingBackground() {
 
       <div className="buttns">
       <button>Mark As Compleated</button>
-      <button>Next</button>
+      <Link to={'/courses/css/m2/assigment2'}><button>Next</button></Link>
     </div>
     </>
   )

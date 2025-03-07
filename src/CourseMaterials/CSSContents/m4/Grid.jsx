@@ -1,5 +1,6 @@
 import React from 'react';
 import CssSidebar from '../CssSidebar';
+import { Link } from 'react-router-dom';
 
 export default function Grid() {
   return (
@@ -80,6 +81,10 @@ export default function Grid() {
           </pre>
         </div>
       </div>
+      <div className="buttns">
+      <button>Mark As Compleated</button>
+      <Link to={'/courses/css/m4/assigment4'}><button>Next</button></Link>
+    </div>
     </>
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import HtmlSidebar from '../HtmlSidebar'
+import { Link } from 'react-router-dom'
 
 export default function List() {
   return (
@@ -91,7 +92,7 @@ By default, each {"<li>"} in an ordered list is numbered.</p>
 
       <div className="buttns">
       <button>Mark As Compleated</button>
-      <button>Next</button>
+      <Link to={'/Courses/html/m2/Tables'}><button>Next</button></Link>
     </div>
     </>
   )

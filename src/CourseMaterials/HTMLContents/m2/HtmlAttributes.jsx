@@ -1,5 +1,6 @@
 import React from 'react'
 import HtmlSidebar from '../HtmlSidebar'
+import { Link } from 'react-router-dom'
 
 export default function HtmlAttributes() {
   return (
@@ -35,7 +36,7 @@ export default function HtmlAttributes() {
       
       <div className="buttns">
       <button>Mark As Compleated</button>
-      <button>Next</button>
+      <Link to={'/Courses/html/m2/Document-Structure-Tags'}><button>Next</button></Link>
     </div>
     </>
   )

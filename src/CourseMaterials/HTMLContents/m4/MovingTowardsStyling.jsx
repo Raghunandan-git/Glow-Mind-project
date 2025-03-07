@@ -1,5 +1,6 @@
 import React from 'react'
 import HtmlSidebar from '../HtmlSidebar'
+import { Link } from 'react-router-dom'
 
 export default function MovingTowardsStyling() {
   return (
@@ -66,7 +67,7 @@ But before that, let’s understand what inline and block elements are</p>
       </div>
       <div className="buttns">
       <button>Mark As Compleated</button>
-      <button>Next</button>
+      <Link to={'/Courses/html/m4/Understanding-DOM'}><button>Next</button></Link>
     </div>
     </>
   )

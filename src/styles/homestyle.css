@@ -1,84 +1,143 @@
 /* homestyle.css */
-.home-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color:rgb(243, 231, 254);
-    padding: 50px;
-    margin-top: 20px;
-    width: 90%;
-    margin-left:2%;
-    border: 1px solid indigo;
-    box-shadow: 0 2px 10px indigo;
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../homg\ bg.png');
+  background-size:100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px;
+  margin-top: 20px;
+  width: 90%;
+  margin-left: 2%;
+  border: 1px solid indigo;
+  box-shadow: 0 2px 10px indigo;
 }
-.home-tags{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: indigo;
-    text-align: center;
-    animation: textSlideDown 1s ease-out;
+.home-tags {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: indigo;
+  text-align: center;
+  animation: textSlideDown 1s ease-out;
 }
-.btns{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding-right: 50px;
-}
-@keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-    to {
-      opacity: 0.5;
-      transform: translateX(0%);
-    }
-  }
-.cta-banner{
-    background:linear-gradient(to right,rgb(133, 51, 192),indigo,rgb(133, 51, 188));
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    margin-top: 10px;
-    color: white;
-    animation: slideIn 1s ease-out;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
-    margin-top: 30px;
-}
-.cta-banner .cta-btn{
-    background:white;
-    color: indigo;
-    width: 20%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    box-shadow: none;
-}
-    
-@keyframes textSlideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-right: 50px;
 }
 
-.popular-courses{
-    text-align: center;
-    margin: 40px 0;
-    color: white;
+.cta-banner {
+  background: linear-gradient(
+    to right,
+    rgb(162, 57, 236),
+    rgb(101, 2, 172),
+    rgb(162, 57, 236)
+  );
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  color: white;
+  animation: slideIn 1s ease-out;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  margin-top: 30px;
 }
-.popular-list{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+.cta-banner .cta-btn {
+  background: white;
+  color: indigo;
+  width: 20%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  box-shadow: none;
 }
-.popular-card{
-    background:linear-gradient(to right,indigo,rgb(131, 4, 221));
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-    width: 200px;
-    text-align: center;
+
+@keyframes textSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popular-courses {
+  text-align: center;
+  margin: 40px 0;
+  color: white;
+}
+.popular-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.popular-card {
+  background: linear-gradient(to right, rgb(105, 16, 168), rgb(149, 53, 217));
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: 100px;
+  text-align: center;
+}
+.popular-card-link {
+  color: white;
+  text-decoration: none;
+}
+.why-choose {
+  text-align: center;
+  padding: 40px 20px;
+  background:linear-gradient(to right ,#ffffff, #f1e5f8, #ffffff);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.why-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(149, 0, 255, 0.438);
+  text-align: center;
+  transition:transform 0.2s ease ;
+}
+.why-card:hover{
+  transform: translateY(-5px);
+}
+
+.reviews-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.reviews-container {
+  
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(224, 157, 255, 0.8);
+  transition: transform 0.2s ease;
+}
+.review-card:hover{
+  transform: translateY(-5px);
+}
+.stars {
+  color: #fbbc04;
+  font-size: 18px;
 }

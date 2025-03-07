@@ -1,5 +1,6 @@
 import React from 'react'
 import HtmlSidebar from '../HtmlSidebar'
+import { Link } from 'react-router-dom'
 
 export default function HtmlForms() {
   return (
@@ -75,7 +76,7 @@ We'll explore the key elements and tags that make up an HTML form, how they work
       </div>
       <div className="buttns">
       <button>Mark As Compleated</button>
-      <button>Next</button>
+      <Link to={'/Courses/html/m3/Semantic-Tags'}><button>Next</button></Link>
     </div>
     </>
   )

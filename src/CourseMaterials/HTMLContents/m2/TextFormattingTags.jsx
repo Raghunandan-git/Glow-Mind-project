@@ -1,5 +1,6 @@
 import React from 'react'
 import HtmlSidebar from '../HtmlSidebar'
+import { Link } from 'react-router-dom'
 
 export default function TextFormattingTags() {
   return (
@@ -98,7 +99,7 @@ export default function TextFormattingTags() {
 
       <div className="buttns">
       <button>Mark As Compleated</button>
-      <button>Next</button>
+      <Link to={'/Courses/html/m2/List'} ><button>Next</button></Link>
     </div>
     </>
   )

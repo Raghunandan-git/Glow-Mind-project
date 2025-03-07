@@ -79,7 +79,7 @@ export default function CssIntro() {
           <h3>5 Modules</h3>
           <h3>4.5<FaStar className='rating'/> Ratings</h3>
           
-          <Link to={'/courses/css/Introduction-to-Css'}>
+          <Link to={'/courses/css/m1/Introduction-to-Css'}>
             <button>Go To Course</button>
           </Link>
         </div>

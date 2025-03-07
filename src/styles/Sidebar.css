@@ -15,7 +15,7 @@ body.no-scroll{
     z-index: 1000;
     border: 1px solid indigo;
     border-radius: 10px;
-    box-shadow: 2px 2px 20px 20px rgba(167, 44, 255, 0.29);
+    box-shadow: 2px 2px 20px 10px rgba(174, 61, 255, 0.29);
     overflow-y: auto;
   }
   

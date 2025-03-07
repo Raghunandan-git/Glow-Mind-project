@@ -1,5 +1,6 @@
 import React from 'react'
 import HtmlSidebar from '../HtmlSidebar'
+import { Link } from 'react-router-dom'
 
 export default function LinksAndMedia() {
   return (
@@ -67,7 +68,7 @@ export default function LinksAndMedia() {
       </div>
       <div className="buttns">
       <button>Mark As Compleated</button>
-      <button>Next</button>
+      <Link to={'/Courses/html/m3/HTML-Forms'}><button>Next</button></Link>
     </div>
     </>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import HtmlSidebar from '../HtmlSidebar'
+import { Link } from 'react-router-dom'
 
 export default function DocumentStructureTags() {
   return (
@@ -26,7 +27,7 @@ export default function DocumentStructureTags() {
       
       <div className="buttns">
       <button>Mark As Compleated</button>
-      <button>Next</button>
+      <Link to={'/Courses/html/m2/Text-Formatting-Tags'}><button>Next</button></Link>
     </div>
     </>
   )
