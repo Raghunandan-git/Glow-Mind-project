@@ -1,0 +1,70 @@
+/* //navstyle.css */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 5px 20px 5px 20px;
+    /* color: antiquewhite; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background:linear-gradient(to right,indigo,rgb(133, 51, 192));
+    
+  }
+  .navbar-search{
+    position: relative;
+  }
+  .search-icon{
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    color: indigo;
+  }
+
+.navbar-links ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+.navbar-links ul li{
+    color: antiquewhite;
+    text-decoration: none;
+    padding: 5px;
+}
+.navbar-links ul li:hover{
+    background-color: rgb(254, 253, 254);
+    padding: 5px;
+    border-radius: 4px;
+    color: white;
+}
+
+.navbar-search input{
+    padding: 8px;
+    padding-left: 40px;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 200%;
+    font-size: 14px;
+}
+.navbar-search input:focus{
+    outline: none;
+}
+
+.nav-profile ul li{
+    padding: 5px;
+    color: aliceblue;
+    list-style-type: none;
+}
+.nav-profile ul li:hover{
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 4px;
+}
+.nav-link{
+    color:rgb(255, 255, 255);
+    font-size: 14px;
+    text-decoration: none;
+}
+.nav-link:hover{
+    color:indigo;
+    font-size: 14px;
+}
