@@ -1,18 +1,27 @@
 
 
 .about p{
-    font-size: 18px;
+    font-size: large;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 20px;
-    padding: 20px;
+    margin: 10px;
+    padding: 15px;
+    line-height: 25px;
 }
 .about h2{
     color:indigo;
     text-align: left;
+    text-decoration: underline;
 }
 .about{
      align-items: center;
-     margin: 70px;
-     padding: 20px;
-     border: 1px solid black;
+     width: 70%;
+     margin:40px 15%;     
+     padding: 40px;
+     border-radius: 30px ;
+     background: linear-gradient(to right,rgb(255, 255, 255),rgb(237, 214, 254),rgb(255, 255, 255));
+     box-shadow: 2px 2px 20px 2px rgba(86, 85, 85, 0.263);
+}
+.about ul li{
+    padding: 15px;
+    font-size: large;
 }

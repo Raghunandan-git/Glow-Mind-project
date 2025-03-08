@@ -1,138 +1,51 @@
-/* body {
-    font-family: Arial, sans-serif;
-    background-color: #e6d5f7;
-    margin: 0;
-    padding: 20px;
-}
-
-.dashboard-container {
-    max-width: 90%;
-    margin: auto;
-    background: white;
+/* Light Theme with Indigo Accent */
+.enrolled-courses {
+    background: #f5f5f5;
+    color: #333;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+  }
 
-.dashboard-title {
-    font-size: 28px;
-    font-weight: bold;
-    color: #4a148c;
-}
-
-h3 {
-    margin-top: 20px;
-    color: #4a148c;
-}
-
-.card-container {
+  
+  .course-card {
     display: flex;
-    overflow-x: auto;
-    gap: 15px;
-    padding: 10px;
-}
-
-.course-card {
-    background: #fff;
+    align-items: center;
+    background: linear-gradient(to right,rgb(254, 252, 255),rgb(239, 228, 248),rgb(255, 255, 255));
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    min-width: 250px;
-    text-align: center;
-    border: 2px solid #d4b6ff;
-}
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #4b0082; 
+  }
+  
+  .course-icon {
+    width: 150px;
+    height: 100px;
+    border-radius: 20px;
+    margin-right: 15px;
+  }
+  
+  .course-info {
+    flex-grow: 1;
+    width: 50%;
+  }
+  
 
-.course-image {
+ 
+  
+  .progress-bar {
+    height: 6px;
     width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.course-name {
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.course-rating {
-    color: #ff9800;
-    font-size: 14px;
-}
-
-.progress-bar {
-    height: 8px;
     background: #ddd;
-    border-radius: 5px;
-    margin-top: 5px;
+    border-radius: 3px;
     overflow: hidden;
-}
-
-.progress {
+    margin: 5px 0;
+  }
+  
+  .progress {
     height: 100%;
-    background: #007bff;
-    border-radius: 5px;
-}
-
-.continue-btn, .enroll-btn, .review-btn {
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.continue-btn {
-    background: #007bff;
-    color: white;
-}
-
-.enroll-btn {
-    background: #6a0dad;
-    color: white;
-}
-
-.review-btn {
-    background: #ff9800;
-    color: white;
-}
-
-.continue-btn:hover {
-    background: #0056b3;
-}
-
-.enroll-btn:hover {
-    background: #4a148c;
-}
-
-.review-btn:hover {
-    background: #e68900;
-}
-
-textarea {
-    width: 100%;
-    height: 60px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 5px;
-    resize: none;
-    margin-top: 10px;
-}
-
-.review-text {
-    margin-top: 5px;
-    font-style: italic;
-}
-
-::-webkit-scrollbar {
-    height: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #6a0dad;
-    border-radius: 4px;
-} */
+    background:linear-gradient(to right,Indigo,rgb(117, 40, 172))
+  }
+  
+  
+  
