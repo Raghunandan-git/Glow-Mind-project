@@ -1,21 +1,73 @@
-.container {
-    padding: 24px;
-  }
+.instructor-container {
+  max-width: 85%;
+  margin: 30px auto;
+  padding: 40px;
+  box-shadow: 2px 2px 20px 10px rgba(212, 167, 244, 0.396);
+  border-radius: 30px;
+  background: linear-gradient(to right,rgb(255, 255, 255),rgb(244, 228, 255),rgb(255, 255, 255));
+}
+.instructor-header {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.about-section{
+  display: flex;
+  justify-content: space-between;
+}
+.instructor-photo {
+  width: 100px;
+  height: 100px;
+  border: 2px solid indigo;
+  border-radius: 50%;
+}
+.instructor-course{
+  display: flex;
+  justify-content: space-between;
+
+}
+.instructor-course,.instructor-course-card button{
+  width:max-content;
+}
+.instructor-course-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right,rgb(254, 252, 255),rgb(239, 228, 248),rgb(255, 255, 255));
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #4b0082; 
+}
+.course-head{
+  display: flex;
+  gap: 50px;
+}
+.student-questions {
+  margin-top: 30px;
+  background: #fff8dc;
+  padding: 20px;
+  border-radius: 10px;
+}
+.question-box {
   
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .course-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 16px;
-    margin-top: 16px;
-  }
-  
-  .section {
-    margin-top: 24px;
-  }
-  
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.input-answer{
+  width: 75%;
+  height: 60px;
+  border: 1px solid indigo;
+  border-radius: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: medium;
+  padding: 5px;
+}
+.answer-btn {
+  width: 20%;
+}
+.answer-box{
+  display: flex;
+  justify-content: space-between;
+}
