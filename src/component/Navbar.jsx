@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/navstyle.css";
-import { FaHome, FaSearch, FaUser, FaBook, FaBell, FaAngleDown, FaPen, FaSignOutAlt, FaCog, } from "react-icons/fa";
+import {  FaSearch, FaUser, FaBook, FaBell, FaAngleDown,  FaSignOutAlt, FaCog, } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,26 +75,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar-links">
-        <ul>
-          <li>
-            <Link to="/" className="nav-link">
-              <FaHome className="icon" /> Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/courses" className="nav-link">
-              <FaBook className="icon" /> Courses
-            </Link>
-          </li>
-          <li>
-            <Link to="/assignments" className="nav-link">
-              <FaPen className="icon" />
-              Assignments
-            </Link>
-          </li>
-        </ul>
-      </div>
+      
 
       <div className="navbar-search" ref={searchRef}>
         <FaSearch className="search-icon" size={15} />

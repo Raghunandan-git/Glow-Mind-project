@@ -1,9 +1,9 @@
 .footer{
-   background-color:whitesmoke;
-   border-top: 2px solid black;
+   background:linear-gradient(360deg,rgb(214, 163, 246),white);
    padding: 20px 30px 20px 30px;
    margin-top: 10px;
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   max-height: 350px;
 }
 .footer-container{
     display: flex;

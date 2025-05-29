@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 import Nav from './component/Nav';
 import Header from './component/Header';
 import { BrowserRouter,useLocation } from 'react-router-dom';
-import Navbar from './component/Navbar';
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -21,7 +20,6 @@ function App() {
    <BrowserRouter>
    <ScrollToTop />
    <Header/>
-   <Navbar/>
    <Nav/>
    </BrowserRouter>
    </>

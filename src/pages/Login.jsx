@@ -1,66 +1,79 @@
-//Login.jsx
-import React, { useState } from 'react'
-import '../styles/loginstyle.css'
-import logo from '../Glow mind logo.png';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import '../styles/loginstyle.css';
+import logo from '../Glow mind logo.png';
 import { FaAsterisk } from 'react-icons/fa';
+import Footer from '../component/Footer';
+
 export default function Login() {
-  const [role,SetRole]=useState('')
-  const navigate=useNavigate();
-  const handleSubmit=(e)=>{
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if(role==="student"){
-      navigate('/student');
+    if (email.trim() === '' || password.trim() === '') {
+      alert('Please fill in all fields');
+      return;
     }
-    else if(role==='instructor'){
-      navigate('/instructor');
-    }
-    else{
-      alert("select any role")
-    }
-  }
-  
+    navigate('/dashboard'); // Redirect to a dashboard page
+  };
+
   return (
     <>
-     <div className='box'>
+    <div className="login-bg">
+    <div className="box">
       <div className="container">
         <div className="logoimg">
-          <img src={logo} alt="logo" width={150} height={150}/>
+          <img src={logo} alt="logo" width={120} height={120} />
         </div>
-        <h2>Sign-in</h2>
-          <form onSubmit={handleSubmit} >
+        <h2>Sign In</h2>
+        <form onSubmit={handleSubmit}>
           <div className="input-group">
-            <label htmlFor="email">Email Address <FaAsterisk className='asterisk'/></label>
-            <input type="email" id="email" placeholder="Email Address" />
+            <label htmlFor="email">
+              Email Address <FaAsterisk className="asterisk" />
+            </label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
           </div>
           <div className="input-group">
-            <label htmlFor="password">Password <FaAsterisk className='asterisk'/></label>
-            <input type="password" id="password" placeholder="Password" />
-          </div>
-          <div className="role-group">
-            <label >Role <FaAsterisk className='asterisk'/></label>
-            <div>
-            <input type="radio" id='student' name='role' value="student" onChange={(e)=>SetRole(e.target.value)} />
-            <label htmlFor="student">Student</label>
-            </div>
-            <div>
-            <input type="radio" name="role" id="instructor" value="instructor" onChange={(e)=>SetRole(e.target.value)} />
-            <label htmlFor="instructor">Instructor</label>
-            </div>
+            <label htmlFor="password">
+              Password <FaAsterisk className="asterisk" />
+            </label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
           </div>
           <div className="options">
             <label>
-              <input type="checkbox" />
-              Remember me
+              <input type="checkbox" /> Remember me
             </label>
+            <Link to="/forgot-password" className="forgot-link">
+              Forgot Password?
+            </Link>
           </div>
-          <button type="submit" className="btn">SIGN IN</button>
-          </form>
-          <div className="links">
-          <Link to='/signup' >Don't have an account?Sign-up</Link>
+          <button type="submit" className="btn">
+            SIGN IN
+          </button>
+        </form>
+        <div className="links">
+          <Link to="/signup">Don't have an account? Sign up</Link>
         </div>
       </div>
-     </div>
+    </div>
+    </div>
+    <Footer/>
     </>
-  )
+  );
 }

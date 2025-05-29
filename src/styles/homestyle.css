@@ -1,31 +1,73 @@
 /* homestyle.css */
+.home{
+  background:rgb(233, 207, 249);
+
+  padding: 40px;
+}
+
 .home-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   background-image: url('../homg\ bg.png');
   background-size:100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 50px;
-  margin-top: 20px;
-  width: 90%;
-  margin-left: 2%;
-  border: 1px solid indigo;
-  box-shadow: 0 2px 10px indigo;
+  padding: 80px 70px;
+  margin-top: -2px;
+  width: 80%;
+  margin-left: 6%;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.153);
 }
-.home-tags {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: indigo;
-  text-align: center;
-  animation: textSlideDown 1s ease-out;
+.home-container-left {
+  width: 50%;
+}
+
+.home-tags h1 {
+  text-align: left;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #111;
+}
+
+.highlight {
+  color:rgb(103, 11, 168);
+}
+.subtext {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
 }
 .btns {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding-right: 50px;
+  gap: 15px;
+  margin-top: 20px;
 }
+.home-box{
+  display: flex;
+  justify-content: space-evenly;
+  /* margin-top: 30px; */
+  padding: 10px 0px 30px 0px ;
+  background:linear-gradient(180deg,rgb(233, 207, 249),rgb(233, 207, 249),white);
+}
+.stat-box {
+  background:rgb(255, 255, 255);
+  width: max-content;
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: bolder;
+  color: #000000;
+}
+
 
 .cta-banner {
   background: linear-gradient(
@@ -43,6 +85,7 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 20px;
   margin-top: 30px;
+  /* margin-bottom: 20px; */
 }
 .cta-banner .cta-btn {
   background: white;
@@ -89,7 +132,8 @@
 .why-choose {
   text-align: center;
   padding: 40px 20px;
-  background:linear-gradient(to right ,#ffffff, #f1e5f8, #ffffff);
+  background:rgb(242, 230, 250);
+
 }
 
 .why-grid {
@@ -115,29 +159,96 @@
 
 .reviews-section {
   text-align: center;
-  margin: 40px 0;
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+}
+
+.reviews-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+.reviewer{
+  display: flex;
+}
+
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
 }
 
 .reviews-container {
-  
   display: flex;
-  gap: 20px;
   justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .review-card {
-  background: #f8f9fa;
-  padding: 15px;
-  border-radius: 10px;
-  width: 250px;
-  box-shadow: 0 4px 8px rgba(224, 157, 255, 0.8);
-  transition: transform 0.2s ease;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
-.review-card:hover{
+
+.review-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
+
+.user-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.review-text {
+  font-size: 1.1rem;
+  color: #444;
+  font-style: italic;
+}
+
+.review-card h4 {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #222;
+}
+
 .stars {
-  color: #fbbc04;
-  font-size: 18px;
+  font-size: 1.2rem;
+  color: #f39c12;
+  margin-top: 5px;
+}
+
+.logo-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.196);
+
+}
+
+.logo-container {
+  display: flex;
+  gap: 40px; /* Adjust spacing between logos */
+}
+
+.logo-container img {
+  height: 60px; /* Adjust logo size */
+  object-fit: contain;
+}
+
+
+#companies-head{
+  text-align: center;
+
 }

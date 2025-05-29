@@ -9,55 +9,8 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background: linear-gradient(to right, rgb(137, 31, 212), rgb(94, 4, 159), rgb(137, 31, 212));
 }
-.navbar-links ul{
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-}
-.navbar-links ul li{
-    padding: 5px 15px;
-}
-.nav-link{
-    color: rgb(255, 255, 255);
-    font-size: 14px;
-    text-decoration: none;
-}
-.navbar-links ul li:hover{
-    background-color: rgb(254, 253, 254);
-    border-radius: 10px;
 
-}
-.navbar-links ul li:hover .nav-link{
-    color: indigo;
-}
-.navbar-search{
-    position: relative;
-}
 
-.navbar-search input{
-    padding: 8px;
-    padding-left: 40px;
-    border-radius: 10px;
-    border: 2px solid black;
-    width: 70%;
-    max-height: 10px;
-    font-size: 16px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.icon{
-    position: relative;
-    top: 1.5px;
-    margin-right: 2px;
-} 
-.search-icon{
-    position: absolute;
-    left: 10px;
-    top: 7px;
-    color: indigo;
-}
-.navbar-search input:focus{
-    outline: none;
-}
 .nav-profile ul{
     display: flex;
     gap: 10px;
@@ -120,32 +73,3 @@
     box-shadow:2px 2px 5px 2px rgba(166, 42, 255, 0.466);
 
 }
-.search-results {
-    position: absolute;
-    background: white;
-    border: 1px solid #ddd;
-    max-height: 150px;
-    overflow-y: auto;
-    width: 200px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-  }
-  
-  .search-item {
-    display: block;
-    padding: 10px;
-    color: black;
-    text-decoration: none;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .search-item:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .no-results {
-    padding: 10px;
-    color: gray;
-    text-align: center;
-  }
-
