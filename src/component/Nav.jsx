@@ -143,6 +143,8 @@ import BootstrapIntro from '../CourseIntro/BootstrapIntro';
 import MongoDBIntro from '../CourseIntro/MongodbIntro';
 import TailwindCSSIntro from '../CourseIntro/TailwindIntro';
 import NodeExpressIntro from '../CourseIntro/ExpressIntro';
+import ProtectedRoute from './ProtectedRoute';
+import Dashboard from '../pages/Dashboard';
 
 
 
@@ -158,6 +160,15 @@ export default function Nav() {
         <Route path="/student" element={<Student />} />
         <Route path="/instructor" element={<Instructor />} />
         <Route path='/signup' element={<Signup />} />
+
+        <Route path='/dashboard' 
+               element={
+                <ProtectedRoute>
+                  <Dashboard/>
+                </ProtectedRoute>
+               }
+        />
+
         <Route path='/courses' element={<Courses/>} />
         <Route path='/about' element={<AboutUs/>} />
         <Route path='/profile' element={<Profile/>} />

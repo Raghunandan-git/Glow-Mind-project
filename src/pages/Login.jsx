@@ -10,14 +10,33 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (email.trim() === '' || password.trim() === '') {
-      alert('Please fill in all fields');
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  if (email.trim() === '' || password.trim() === '') {
+    alert('Please fill in all fields');
+    return;
+  }
+
+  try {
+    const res = await fetch('http://localhost:5000/api/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
+    });
+
+    const data = await res.json();
+    if (!res.ok) {
+      alert(data.message || 'Login failed');
       return;
     }
-    navigate('/dashboard'); // Redirect to a dashboard page
-  };
+
+    localStorage.setItem('token', data.token);
+    localStorage.setItem('user', JSON.stringify(data.user));
+    navigate('/dashboard');
+  } catch (err) {
+    alert('Server error. Please try again.');
+  }
+};
 
   return (
     <>
