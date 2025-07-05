@@ -1,12 +1,16 @@
 //Header.jsx
 import React, {  useEffect, useRef, useState } from 'react'
 import logo from '../glow mind.png'
+import { useAuth } from '../context/AuthContext'; 
 import { Link } from 'react-router-dom'
-import { FaBook, FaHome, FaInfoCircle, FaSearch} from 'react-icons/fa'
+import { FaAngleDown, FaBook, FaCog, FaHome, FaInfoCircle, FaSearch, FaSignOutAlt, FaUser} from 'react-icons/fa'
 export default function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredCourses, setFilteredCourses] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
   const searchRef = useRef(null);
+const { user, logout } = useAuth();
+const toggleDropdown = () => setIsOpen(!isOpen);
 const courses = [
     { name: "HTML", path: '/courses/htmlintro' },
     { name: "CSS", path: '/courses/cssintro' },
@@ -104,13 +108,26 @@ const courses = [
                 </ul>
               </div>
         <div className="header-btn">
-            <Link to='/login' className='login-btn'>
-            <h3 id='login'>Login</h3>
-            </Link>
-            <Link to='/signup'>
-            <button>Sign up</button>
-            </Link>
-        </div>
+        {user ? (
+          <>
+            <FaAngleDown color="black" />
+            <FaUser size={20} className="profile" onClick={toggleDropdown} />
+            {isOpen && (
+              <div className="dropdown-menu">
+                <li><Link to="/profile" className="dropdown-li"><FaUser className="icon" color="indigo" size={15} /> My Profile</Link></li>
+                <li><Link to="/courses" className="dropdown-li"><FaBook className="icon" color="indigo" size={15} /> My Courses</Link></li>
+                <li><Link to="/settings" className="dropdown-li"><FaCog className="icon" color="indigo" size={15} /> Settings</Link></li>
+                <li><button id='logout-btn' onClick={() => { logout(); setIsOpen(false); }} className="dropdown-li logout-btn"><FaSignOutAlt className="icon" color="indigo" size={15} /> Log Out</button></li>
+              </div>
+            )}
+          </>
+        ) : (
+          <>
+            <Link to='/login' className='login-btn'><h3 id='login'>Login</h3></Link>
+            <Link to='/signup'><button>Sign up</button></Link>
+          </>
+        )}
+      </div>
       </div>
 
     </>

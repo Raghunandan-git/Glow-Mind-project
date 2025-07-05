@@ -4,8 +4,10 @@ import '../styles/loginstyle.css';
 import logo from '../Glow mind logo.png';
 import { FaAsterisk } from 'react-icons/fa';
 import Footer from '../component/Footer';
+import { useAuth } from '../context/AuthContext';
 
 export default function Login() {
+  const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -29,7 +31,7 @@ export default function Login() {
       alert(data.message || 'Login failed');
       return;
     }
-
+    login(data.user);
     localStorage.setItem('token', data.token);
     localStorage.setItem('user', JSON.stringify(data.user));
     navigate('/dashboard');
