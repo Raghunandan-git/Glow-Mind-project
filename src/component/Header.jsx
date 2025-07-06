@@ -3,7 +3,7 @@ import React, {  useEffect, useRef, useState } from 'react'
 import logo from '../glow mind.png'
 import { useAuth } from '../context/AuthContext'; 
 import { Link } from 'react-router-dom'
-import { FaAngleDown, FaBook, FaCog, FaHome, FaInfoCircle, FaSearch, FaSignOutAlt, FaUser} from 'react-icons/fa'
+import { FaAngleDown, FaBook, FaCog, FaHome, FaInfoCircle, FaSearch, FaSignOutAlt, FaUser, FaChalkboardTeacher} from 'react-icons/fa'
 export default function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredCourses, setFilteredCourses] = useState([]);
@@ -116,6 +116,9 @@ const courses = [
               <div className="dropdown-menu">
                 <li><Link to="/profile" className="dropdown-li"><FaUser className="icon" color="indigo" size={15} /> My Profile</Link></li>
                 <li><Link to="/courses" className="dropdown-li"><FaBook className="icon" color="indigo" size={15} /> My Courses</Link></li>
+                {user?.role === 'instructor' && (
+                  <li><Link to="/instructor-dashboard" className="dropdown-li"><FaChalkboardTeacher className="icon" color="indigo" size={15} /> Instructor Dashboard</Link></li>
+                )}
                 <li><Link to="/settings" className="dropdown-li"><FaCog className="icon" color="indigo" size={15} /> Settings</Link></li>
                 <li><button id='logout-btn' onClick={() => { logout(); setIsOpen(false); }} className="dropdown-li logout-btn"><FaSignOutAlt className="icon" color="indigo" size={15} /> Log Out</button></li>
               </div>

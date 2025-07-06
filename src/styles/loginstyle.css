@@ -54,6 +54,25 @@ h2 {
     outline: none;
 }
 
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #8c4bdc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.input-group select:focus {
+    border: 2px solid #8c4bdc;
+    outline: none;
+}
+
+.role-select {
+    font-family: inherit;
+}
+
 .options {
     display: flex;
     justify-content: space-between;

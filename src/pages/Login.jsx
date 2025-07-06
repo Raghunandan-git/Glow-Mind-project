@@ -34,7 +34,16 @@ export default function Login() {
     login(data.user);
     localStorage.setItem('token', data.token);
     localStorage.setItem('user', JSON.stringify(data.user));
-    navigate('/dashboard');
+    
+    // Redirect based on user role
+    if (data.user.role === 'instructor') {
+      navigate('/instructor-dashboard');
+    } else if (data.user.role === 'student') {
+      navigate('/dashboard');
+    } else {
+      // Default fallback for admin or other roles
+      navigate('/dashboard');
+    }
   } catch (err) {
     alert('Server error. Please try again.');
   }

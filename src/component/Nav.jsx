@@ -144,7 +144,9 @@ import MongoDBIntro from '../CourseIntro/MongodbIntro';
 import TailwindCSSIntro from '../CourseIntro/TailwindIntro';
 import NodeExpressIntro from '../CourseIntro/ExpressIntro';
 import ProtectedRoute from './ProtectedRoute';
+import RoleBasedRoute from './RoleBasedRoute';
 import Dashboard from '../pages/Dashboard';
+import InstructorDashboard from '../pages/InstructorDashboard';
 
 
 
@@ -163,9 +165,17 @@ export default function Nav() {
 
         <Route path='/dashboard' 
                element={
-                <ProtectedRoute>
+                <RoleBasedRoute allowedRoles={['student']}>
                   <Dashboard/>
-                </ProtectedRoute>
+                </RoleBasedRoute>
+               }
+        />
+
+        <Route path='/instructor-dashboard' 
+               element={
+                <RoleBasedRoute allowedRoles={['instructor']}>
+                  <InstructorDashboard/>
+                </RoleBasedRoute>
                }
         />
 

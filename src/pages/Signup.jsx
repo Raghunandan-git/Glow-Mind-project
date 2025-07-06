@@ -12,12 +12,13 @@ export default function Signup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [role, setRole] = useState('student');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
   e.preventDefault();
 
-  if (!name || !email || !password || !confirmPassword) {
+  if (!name || !email || !password || !confirmPassword || !role) {
     alert('Please fill in all fields');
     return;
   }
@@ -37,7 +38,7 @@ export default function Signup() {
     const res = await fetch('http://localhost:5000/api/auth/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, password,role: 'student'}),
+      body: JSON.stringify({ name, email, password, role }),
     });
 
     const data = await res.json();
@@ -45,10 +46,19 @@ export default function Signup() {
       alert(data.message || 'Signup failed');
       return;
     }
-login(data.user); 
+    login(data.user); 
     localStorage.setItem('token', data.token);
     localStorage.setItem('user', JSON.stringify(data.user));
-    navigate('/dashboard');
+    
+    // Redirect based on user role
+    if (data.user.role === 'instructor') {
+      navigate('/instructor-dashboard');
+    } else if (data.user.role === 'student') {
+      navigate('/dashboard');
+    } else {
+      // Default fallback for admin or other roles
+      navigate('/dashboard');
+    }
   } catch (err) {
     alert('Server error. Please try again.');
   }
@@ -108,6 +118,19 @@ login(data.user);
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
             />
+          </div>
+          <div className="input-group">
+            <label htmlFor="role">I want to join as<FaAsterisk className="asterisk" /></label>
+            <select
+              id="role"
+              value={role}
+              onChange={(e) => setRole(e.target.value)}
+              required
+              className="role-select"
+            >
+              <option value="student">Student</option>
+              <option value="instructor">Instructor</option>
+            </select>
           </div>
           <button type="submit" className="btn">SIGN UP</button>
         </form>
